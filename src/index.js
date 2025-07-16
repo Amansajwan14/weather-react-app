@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import React from 'react';
+import ReactDOM from 'react-dom';
+import WeatherApp from './WeatherApp';
+import './index.css';
+
+ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello, React Weather App!</h1>
-  </React.StrictMode>
+    <WeatherApp />
+  </React.StrictMode>,
+  document.getElementById('root')
 );

@@ -9,7 +9,7 @@ function App() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeView, setActiveView] = useState('current'); 
 
-  const API_KEY = "895284fb2d2c50a520ea537456963d9c";
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
   const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${API_KEY}`;
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=${API_KEY}`;
   const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${API_KEY}`;

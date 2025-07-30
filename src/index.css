@@ -21,14 +21,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
   padding: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
 }
 
 .app:before {
   content: "";
 
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -48,6 +56,7 @@ body {
   padding: 100px 40px;
   transition: all 0.3s ease;
   position: absolute;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -124,7 +133,7 @@ body {
 }
 
 .suggestions-dropdown {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   right: 0;
@@ -155,7 +164,6 @@ body {
 .suggestion-item:last-child {
   border-bottom: none;
 }
-
 
 .nav-tabs {
   display: flex;
@@ -212,6 +220,25 @@ body {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 375px) {
+  .glass-container {
+    padding: 20px 10px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .search-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .temp h1 {
+    font-size: 2.2rem;
+  }
+}
+
 .description p {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
@@ -219,6 +246,12 @@ body {
   margin-bottom: 20px;
   text-transform: capitalize;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.location p,
+.description p {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .stats-section {
